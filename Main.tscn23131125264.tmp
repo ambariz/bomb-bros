@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cnewhb2b43ho2" path="res://icon.svg" id="2_cm0pq"]
 [ext_resource type="Script" uid="uid://b1s3smrsqpa8x" path="res://Player1.gd" id="3_r0du0"]
 [ext_resource type="Script" uid="uid://f85ylnb1r23w" path="res://Player2.gd" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://b21awhuj6rwo4" path="res://Bomb.tscn" id="4_fos0i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fos0i"]
 texture = ExtResource("2_cm0pq")
@@ -162,4 +163,4 @@ texture = ExtResource("2_cm0pq")
 position = Vector2(-0.5, 39.5)
 shape = SubResource("RectangleShape2D_r0du0")
 
-[node name="Bombs" type="Node2D" parent="." unique_id=1982110003]
+[node name="Bomb" parent="." unique_id=1040388932 instance=ExtResource("4_fos0i")]

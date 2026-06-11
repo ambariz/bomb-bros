@@ -1,18 +1,36 @@
 extends CharacterBody2D
 
 const SPEED = 200.0
+const BOMB_SCENE = preload("res://Bomb.tscn")
 
-func _physics_process(delta):
+var can_place_bomb = true
+
+func _ready():
+	print("Player2 script loaded")
+
+func _physics_process(_delta):
 	var dir = Vector2.ZERO
 
-	if Input.is_key_pressed(KEY_D):
-		dir.x += 1
-	if Input.is_key_pressed(KEY_A):
-		dir.x -= 1
-	if Input.is_key_pressed(KEY_S):
-		dir.y += 1
-	if Input.is_key_pressed(KEY_W):
+	if Input.is_action_pressed("ui_up"):
 		dir.y -= 1
+	if Input.is_action_pressed("ui_down"):
+		dir.y += 1
+	if Input.is_action_pressed("ui_left"):
+		dir.x -= 1
+	if Input.is_action_pressed("ui_right"):
+		dir.x += 1
 
 	velocity = dir.normalized() * SPEED
 	move_and_slide()
+
+	if Input.is_key_pressed(KEY_ENTER) and can_place_bomb:
+		can_place_bomb = false
+		place_bomb()
+
+	if !Input.is_key_pressed(KEY_ENTER):
+		can_place_bomb = true
+
+func place_bomb():
+	var bomb = BOMB_SCENE.instantiate()
+	bomb.position = position
+	get_tree().current_scene.add_child(bomb)
