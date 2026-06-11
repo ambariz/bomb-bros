@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://53xv66tp8e72"]
+
+[ext_resource type="Script" uid="uid://ds26kupepdidb" path="res://Explosion.gd" id="1_li25b"]
+[ext_resource type="Texture2D" uid="uid://ypokoe2fu071" path="res://game_assets/Bomberman/gfx/explosion_base.png" id="1_oxoqp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxoqp"]
+size = Vector2(50, 49)
+
+[node name="Explosion" type="Area2D" unique_id=1325491774]
+script = ExtResource("1_li25b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=474804704]
+position = Vector2(610, 351)
+scale = Vector2(2, 2)
+texture = ExtResource("1_oxoqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=739026907]
+position = Vector2(610, 350.5)
+shape = SubResource("RectangleShape2D_oxoqp")
