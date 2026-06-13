@@ -138,28 +138,25 @@ tile_map_data = PackedByteArray("AAAkACAAAAACAAAAAAAlACAAAAACAAAAAAAmACAAAAACAAA
 tile_set = SubResource("TileSet_3dxm6")
 
 [node name="Player1" type="CharacterBody2D" parent="." unique_id=1781153837]
+position = Vector2(203, 313)
 script = ExtResource("3_r0du0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player1" unique_id=1344810992]
-position = Vector2(606, 298)
 scale = Vector2(0.375, 1)
 texture = ExtResource("2_cm0pq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player1" unique_id=2048419740]
-position = Vector2(605.5, 298)
 shape = SubResource("RectangleShape2D_uu6xs")
 
 [node name="Player2" type="CharacterBody2D" parent="." unique_id=565641169]
-position = Vector2(431, 403)
+position = Vector2(1026, 312)
 script = ExtResource("4_cm0pq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player2" unique_id=2136179572]
-position = Vector2(0, 40)
 scale = Vector2(1, 0.375)
 texture = ExtResource("2_cm0pq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2" unique_id=1436927270]
-position = Vector2(-0.5, 39.5)
 shape = SubResource("RectangleShape2D_r0du0")
 
 [node name="Bombs" type="Node2D" parent="." unique_id=1982110003]

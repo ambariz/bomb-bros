@@ -7,7 +7,7 @@ var can_place_bomb := true
 
 func _physics_process(_delta):
 	var dir = Vector2.ZERO
-
+	print(global_position)
 	if Input.is_key_pressed(KEY_W):
 		dir.y -= 1
 	if Input.is_key_pressed(KEY_S):
