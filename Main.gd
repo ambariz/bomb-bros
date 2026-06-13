@@ -2,27 +2,33 @@ extends Node2D
 
 var game_over = false
 
-func player_died(player_name):
+func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
+func _process(_delta):
+	if game_over and Input.is_key_pressed(KEY_R):
+		get_tree().paused = false
+		get_tree().reload_current_scene()
+
+func player_died(_player_name):
+
 	if game_over:
 		return
 
+	await get_tree().process_frame
+
+	var p1_alive = get_node_or_null("Player1") != null
+	var p2_alive = get_node_or_null("Player2") != null
+
 	game_over = true
 
-	var label = $WinnerLabel
+	if !p1_alive and !p2_alive:
+		$WinnerLabel.text = "DRAW!\nPress R"
 
-	if player_name == "Player1":
-		label.text = "PLAYER 2 WINS!"
+	elif !p1_alive:
+		$WinnerLabel.text = "PLAYER 2 WINS!\nPress R"
 
-	if player_name == "Player2":
-		label.text = "PLAYER 1 WINS!"
+	elif !p2_alive:
+		$WinnerLabel.text = "PLAYER 1 WINS!\nPress R"
 
 	get_tree().paused = true
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

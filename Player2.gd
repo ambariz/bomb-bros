@@ -42,6 +42,8 @@ func place_bomb():
 		round(global_position.y / tile_size) * tile_size
 	)
 
+	bomb.owner_player = self
+
 	get_tree().current_scene.add_child(bomb)
 	bomb.global_position = bomb_pos
 

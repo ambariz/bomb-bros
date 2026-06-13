@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://1k246ap5gln5" path="res://game_assets/Bomberman/gfx/bomb.png" id="1_1e1di"]
 [ext_resource type="Script" uid="uid://00m8bhotfb0f" path="res://Bomb.gd" id="1_a4im0"]
 
-[node name="Bomb" type="Node2D" unique_id=1298110689]
+[sub_resource type="CircleShape2D" id="CircleShape2D_a4im0"]
+radius = 17.262676
+
+[node name="Bomb" type="Area2D" unique_id=245020184]
 script = ExtResource("1_a4im0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1698851142]
@@ -13,3 +16,7 @@ texture = ExtResource("1_1e1di")
 [node name="Timer" type="Timer" parent="." unique_id=1710504673]
 wait_time = 2.0
 one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=375247201]
+position = Vector2(1, 7)
+shape = SubResource("CircleShape2D_a4im0")
