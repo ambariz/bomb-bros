@@ -8,8 +8,9 @@ func _ready():
 
 func _on_timer_timeout():
 	var explosion = EXPLOSION_SCENE.instantiate()
-	explosion.position = position
+	var explosion_pos = global_position
 
 	get_tree().current_scene.add_child(explosion)
+	explosion.global_position = explosion_pos
 
 	queue_free()

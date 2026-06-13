@@ -3,10 +3,7 @@ extends CharacterBody2D
 const SPEED = 200.0
 const BOMB_SCENE = preload("res://Bomb.tscn")
 
-var can_place_bomb = true
-
-func _ready():
-	print("Player2 script loaded")
+var can_place_bomb := true
 
 func _physics_process(_delta):
 	var dir = Vector2.ZERO
@@ -32,5 +29,11 @@ func _physics_process(_delta):
 
 func place_bomb():
 	var bomb = BOMB_SCENE.instantiate()
-	bomb.position = position
+	var bomb_pos = global_position
+
+	print("Player:", bomb_pos)
+
 	get_tree().current_scene.add_child(bomb)
+	bomb.global_position = bomb_pos
+
+	print("Bomb:", bomb.global_position)
