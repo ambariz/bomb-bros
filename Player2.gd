@@ -34,7 +34,13 @@ func place_bomb():
 		return
 
 	var bomb = BOMB_SCENE.instantiate()
-	var bomb_pos = global_position
+
+	var tile_size = 24
+
+	var bomb_pos = Vector2(
+		round(global_position.x / tile_size) * tile_size,
+		round(global_position.y / tile_size) * tile_size
+	)
 
 	get_tree().current_scene.add_child(bomb)
 	bomb.global_position = bomb_pos

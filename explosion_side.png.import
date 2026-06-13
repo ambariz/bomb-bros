@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfk1jh3jkove3"
-path="res://.godot/imported/explosion.png-d08b715e442720469ad13fd1cedad225.ctex"
+uid="uid://be7ojbuv243h"
+path="res://.godot/imported/explosion_side.png-ac59a50a542ce8096bf916e9de81b5e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_assets/Bomberman/gfx/explosion.png"
-dest_files=["res://.godot/imported/explosion.png-d08b715e442720469ad13fd1cedad225.ctex"]
+source_file="res://explosion_side.png"
+dest_files=["res://.godot/imported/explosion_side.png-ac59a50a542ce8096bf916e9de81b5e1.ctex"]
 
 [params]
 
