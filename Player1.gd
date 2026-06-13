@@ -2,12 +2,14 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 const BOMB_SCENE = preload("res://Bomb.tscn")
+const MAX_BOMBS = 2
 
 var can_place_bomb := true
+var active_bombs := 0
 
 func _physics_process(_delta):
 	var dir = Vector2.ZERO
-	print(global_position)
+
 	if Input.is_key_pressed(KEY_W):
 		dir.y -= 1
 	if Input.is_key_pressed(KEY_S):
@@ -28,12 +30,17 @@ func _physics_process(_delta):
 		can_place_bomb = true
 
 func place_bomb():
+	if active_bombs >= MAX_BOMBS:
+		return
+
 	var bomb = BOMB_SCENE.instantiate()
 	var bomb_pos = global_position
-
-	print("Player:", bomb_pos)
 
 	get_tree().current_scene.add_child(bomb)
 	bomb.global_position = bomb_pos
 
-	print("Bomb:", bomb.global_position)
+	active_bombs += 1
+
+	bomb.tree_exited.connect(func():
+		active_bombs -= 1
+	)
