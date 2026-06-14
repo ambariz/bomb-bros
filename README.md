@@ -2,7 +2,7 @@
 
 A 2-player Bomberman game built with **Godot Engine** where players battle using bombs, explosions, and strategy to win each other.
 
-[![Click to Play](https://img.shields.io/badge/CLICK%20ME%20TO%20PLAY-itch.io-orange?style=for-the-badge&logo=itchdotio)](https://ambariz.itch.io/forest-collector)
+[![Click to Play](https://img.shields.io/badge/CLICK%20ME%20TO%20PLAY-itch.io-orange?style=for-the-badge&logo=itchdotio)](https://ambariz.itch.io/the-bomb-bros)
 
  **LINK :** https://ambariz.itch.io/the-bomb-bros 
 
