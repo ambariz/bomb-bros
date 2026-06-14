@@ -489,3 +489,10 @@ theme_override_fonts/font = ExtResource("13_c6i3y")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=353452391]
+offset_right = 1128.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("13_c6i3y")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 2
