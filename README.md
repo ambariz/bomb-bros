@@ -47,10 +47,10 @@ A 2-player Bomberman game built with **Godot Engine** where players battle using
 
 ## Screenshots
 
-![Screenshot 1](/readme_assets/sc1.png)
+![Screenshot 1](/readme_assets/s1.png)
 
-![Screenshot 2](/readme_assets/sc2.png)
+![Screenshot 2](/readme_assets/s2.png)
 
-![Screenshot 3](/readme_assets/sc3.png)
+![Screenshot 3](/readme_assets/s3.png)
 
 ---
